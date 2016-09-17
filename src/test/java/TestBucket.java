@@ -17,7 +17,7 @@ public class TestBucket{
 
     @Test
     public void testAdd() {
-        assertEquals(true, bucket.add(3) instanceof BucketInterface);
+        assertEquals(Bucket.class, bucket.add(3).getClass());
         bucket.add(3);
         assertEquals(5, bucket.size());
         bucket.throwAway();
@@ -40,12 +40,12 @@ public class TestBucket{
     @Test
     public void testFullFill() {
         bucket.throwAway();
-        assertEquals(true, bucket.fullFill() instanceof BucketInterface);
+        assertEquals(Bucket.class, bucket.fullFill().getClass());
         assertEquals(5, bucket.size());
     }
 
     @Test
-    public void testPour() {
+    public void testPourInto() {
         BucketInterface bucketCapacityFive  = new Bucket(5);
         BucketInterface bucketCapacityThree = new Bucket(3);
         bucketCapacityFive.fullFill();

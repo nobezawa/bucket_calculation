@@ -11,22 +11,22 @@ public interface BucketInterface {
     /**
      * add
      *
-     * @param  water
-     * @return main.java.BucketInterface
+     * @param  water  お水
+     * @return BucketInterface
      */
     BucketInterface add(int water);
 
     /**
      * fullFill
      *
-     * @return main.java.BucketInterface
+     * @return BucketInterface
      */
     BucketInterface fullFill();
 
     /**
      * size
      *
-     * @return main.java.BucketInterface
+     * @return BucketInterface
      */
     int size();
 
@@ -39,7 +39,7 @@ public interface BucketInterface {
     /**
      * pourInto
      *
-     * @param  inToBucket
+     * @param  inToBucket 対象のバケツ
      * @return BucketInterface
      */
     BucketInterface pourInto(BucketInterface inToBucket);
